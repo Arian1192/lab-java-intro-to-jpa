@@ -15,11 +15,11 @@ import lombok.*;
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int CustomerId;
+    private int customerId;
     @Column(name = "customer_name")
     private String customerName;
     @Column(name = "customer_status")
-    private CustomerStatus CustomerStatus;
+    private CustomerStatus customerStatus;
     @Column(name="total_customer_mileage")
     private int totalCustomerMileage;
 }
