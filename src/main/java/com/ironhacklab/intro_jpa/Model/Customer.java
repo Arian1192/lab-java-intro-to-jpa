@@ -2,10 +2,8 @@ package com.ironhacklab.intro_jpa.Model;
 
 import com.ironhacklab.intro_jpa.Enums.CustomerStatus;
 import jakarta.persistence.*;
-
 import lombok.*;
 
-import java.util.UUID;
 
 @Entity
 @Getter
@@ -16,8 +14,8 @@ import java.util.UUID;
 @Table(name = "Customer")
 public class Customer {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID CustomerId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int CustomerId;
     @Column(name = "customer_name")
     private String customerName;
     @Column(name = "customer_status")
